@@ -1,0 +1,13 @@
+@import 'variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background: url(../images/bg-pattern-top.svg) no-repeat 0px -450px, url(../images/bg-pattern-bottom.svg) no-repeat 1100px 500px; 
+  background-color: $dark-cyan;
+}
