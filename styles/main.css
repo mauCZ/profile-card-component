@@ -5,9 +5,103 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
-  background: url(../images/bg-pattern-top.svg) no-repeat 0px -450px, url(../images/bg-pattern-bottom.svg) no-repeat 1100px 500px;
+  background: url(../images/bg-pattern-top.svg) no-repeat 0px -450px, url(../images/bg-pattern-bottom.svg) no-repeat 900px 500px;
   background-color: #19a2ae;
+}
+
+.card {
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 100px 1px #2d3248;
+          box-shadow: 0px 0px 100px 1px #2d3248;
+}
+
+.card .info {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.card .info .name, .card .info .age {
+  padding-top: 1rem;
+}
+
+.card .info .age {
+  margin-left: .5rem;
+}
+
+.card .info .location {
+  padding: .8rem 0 1.1rem 0;
+}
+
+.card .info img {
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: -55px;
+  left: calc(50% - 96px/2);
+}
+
+.card .stats {
+  border-top: 1px solid lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem 0 1rem 0;
+}
+
+.card .stats .stat {
+  text-align: center;
+}
+
+.card .stats .stat > p:first-child {
+  font-weight: 700;
+}
+
+.card .stats .stat > p:nth-child(2) {
+  font-size: .8rem;
+}
+
+.card .weak-font {
+  color: #969696;
+  font-weight: 400;
+}
+
+.card .strong-font {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 350px) {
+  .card .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+    paddint-bottom: 0;
+  }
+  .card .stats .stat {
+    padding-top: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
